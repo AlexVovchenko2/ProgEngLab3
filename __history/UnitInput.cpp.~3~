@@ -1,0 +1,57 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "UnitInput.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TDataInput *DataInput;
+//---------------------------------------------------------------------------
+__fastcall TDataInput::TDataInput(TComponent* Owner)
+	: TForm(Owner)
+{
+	StringGrid->Hide();
+}
+//---------------------------------------------------------------------------
+
+int n,m;
+void __fastcall TDataInput::ButtonClick(TObject *Sender)
+{
+	AnsiString s1, s2;
+	s1 = EditRows->Text;
+	s2 = EditColumns->Text;
+	n = StrToInt(s1);
+	m = StrToInt(s2);
+	StringGrid->RowCount = n;
+	StringGrid->ColCount = m;
+	if (n > 0 && m > 0){
+		StringGrid->Canvas->Brush->Color = clYellow;
+		StringGrid->Show();
+	}
+}
+//---------------------------------------------------------------------------
+void __fastcall TDataInput::ButtonInputClick(TObject *Sender)
+{
+	DataInput->Close();
+	FormAnswer = new TFormAnswer(this);
+}
+//---------------------------------------------------------------------------
+/*void __fastcall TDataInput::StringGridDrawCell(TObject *Sender, System::LongInt ACol,
+          System::LongInt ARow, TRect &Rect, TGridDrawState State)
+{
+    if(ACol == 2 && ARow == 2) // определ€ем конкретную €чейку
+    {
+		StringGrid->Canvas->Brush->Color = clRed;
+		StringGrid->Canvas->FillRect(Rect);
+	}
+} */
+//---------------------------------------------------------------------------
+
+void __fastcall TDataInput::FormClose(TObject *Sender, TCloseAction &Action)
+{
+    Action = caFree;
+}
+//---------------------------------------------------------------------------
+

@@ -9,6 +9,8 @@
 #include <Vcl.Forms.hpp>
 #include <Vcl.Grids.hpp>
 #include "UnitTask.h"
+#include "UnitAnswer.h"
+#include "MAIN.h"
 //---------------------------------------------------------------------------
 class TDataInput : public TForm
 {

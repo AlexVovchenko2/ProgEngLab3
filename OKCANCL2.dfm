@@ -7,7 +7,10 @@ object OKRightDlg: TOKRightDlg
   ClientWidth = 384
   Color = clBtnFace
   ParentFont = True
+  FormStyle = fsMDIChild
   Position = poScreenCenter
+  Visible = True
+  OnClose = FormClose
   TextHeight = 15
   object OKBtn: TButton
     Left = 276

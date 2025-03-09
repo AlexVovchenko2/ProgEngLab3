@@ -14,6 +14,7 @@
 #include <System.hpp>
 
 #include "UnitTask.h"
+#include "MAIN.h"
 //----------------------------------------------------------------------------
 class TOKRightDlg : public TForm
 {
@@ -21,9 +22,10 @@ __published:
 	TButton *OKBtn;
 	TRadioGroup *RadioGroup;
 	void __fastcall OKBtnClick(TObject *Sender);
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:
 public:
-	bool mode;
+	//bool mode;
 	virtual __fastcall TOKRightDlg(TComponent* AOwner);
 };
 //----------------------------------------------------------------------------

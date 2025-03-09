@@ -38,13 +38,21 @@ void __fastcall TMainForm::About1Click(TObject *Sender)
 
 void __fastcall TMainForm::Mode1Click(TObject *Sender)
 {
-	 OKRightDlg->Show();
+	OKRightDlg = new TOKRightDlg(this);
+	 //OKRightDlg->Show();
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TMainForm::Compute1Click(TObject *Sender)
+void __fastcall TMainForm::Input1Click(TObject *Sender)
 {
-	  DataInput->Show();
+    DataInput = new TDataInput(this);
+	//DataInput->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainForm::Solve1Click(TObject *Sender)
+{
+    FormAnswer = new TFormAnswer(this);
 }
 //---------------------------------------------------------------------------
 

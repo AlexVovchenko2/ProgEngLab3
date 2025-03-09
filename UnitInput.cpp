@@ -16,9 +16,10 @@ __fastcall TDataInput::TDataInput(TComponent* Owner)
 }
 //---------------------------------------------------------------------------
 
-int n,m;
+//
 void __fastcall TDataInput::ButtonClick(TObject *Sender)
 {
+	int n,m;
 	AnsiString s1, s2;
 	s1 = EditRows->Text;
 	s2 = EditColumns->Text;
@@ -27,6 +28,7 @@ void __fastcall TDataInput::ButtonClick(TObject *Sender)
 	StringGrid->RowCount = n;
 	StringGrid->ColCount = m;
 	if (n > 0 && m > 0){
+		//MainForm->createVect();
 		StringGrid->Canvas->Brush->Color = clYellow;
 		StringGrid->Show();
 	}
@@ -34,6 +36,17 @@ void __fastcall TDataInput::ButtonClick(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TDataInput::ButtonInputClick(TObject *Sender)
 {
+
+	MainForm->n = DataInput->StringGrid->RowCount;
+	MainForm->m = DataInput->StringGrid->ColCount;
+	MainForm->createVect();
+	for (int i = 0; i < MainForm->m; i++) {
+		for (int j = 0; j < MainForm->n; j++) {
+			MainForm->matrix[j][i] = (DataInput->StringGrid->Cells[i][j] != "") ?
+				StrToFloat(DataInput->StringGrid->Cells[i][j]) : 0;
+		}
+	}
+
 	DataInput->Close();
 }
 //---------------------------------------------------------------------------

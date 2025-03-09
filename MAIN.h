@@ -34,6 +34,7 @@
 
 #include "OKCANCL2.h"
 #include "UnitInput.h"
+#include "UnitAnswer.h"
 //----------------------------------------------------------------------------
 class TMainForm : public TForm
 {
@@ -45,15 +46,32 @@ __published:
 	TMenuItem *Help1;
 	TMenuItem *About1;
 	TMenuItem *Mode1;
-	TMenuItem *Compute1;
+	TMenuItem *Input1;
+	TMenuItem *Solve1;
 	void __fastcall About1Click(TObject *Sender);
 	void __fastcall Mode1Click(TObject *Sender);
-	void __fastcall Compute1Click(TObject *Sender);
+	void __fastcall Input1Click(TObject *Sender);
+	void __fastcall Solve1Click(TObject *Sender);
 	
 private:
 	void __fastcall CreateMDIChild(const String Name);
 public:
 	virtual __fastcall TMainForm(TComponent *Owner);
+
+	bool mode = false;
+
+	int n = 0; int m = 0;
+	std::vector<std::vector<float>> matrix;
+
+	void createVect(){
+		std::vector<float> temp;
+		for (int i = 0; i < this->n; i++) {
+			for (int j = 0; j < this->m; j++)
+				temp.push_back(0.0);
+			this->matrix.push_back(temp);
+			temp.clear();
+		}
+	}
 };
 //----------------------------------------------------------------------------
 extern TMainForm *MainForm;

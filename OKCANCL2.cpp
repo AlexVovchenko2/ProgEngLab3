@@ -16,8 +16,16 @@ __fastcall TOKRightDlg::TOKRightDlg(TComponent* AOwner)
 
 void __fastcall TOKRightDlg::OKBtnClick(TObject *Sender)
 {
-	OKRightDlg->mode = RadioGroup->ItemIndex;
+	//OKRightDlg->mode = RadioGroup->ItemIndex;
+	MainForm->mode = RadioGroup->ItemIndex;
 	Close();
+}
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+
+void __fastcall TOKRightDlg::FormClose(TObject *Sender, TCloseAction &Action)
+{
+	  Action = caFree;
 }
 //---------------------------------------------------------------------------
 

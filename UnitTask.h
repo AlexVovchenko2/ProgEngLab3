@@ -5,7 +5,7 @@
 
 #include <vector>
 
- bool mode = true;        //mode
+ /*bool mode = true;        //mode
 
 class UserTask {
 public:
@@ -14,10 +14,10 @@ public:
 
 	UserTask(int n, int m){
 		this->n = n;
-        this->m = m;
+		this->m = m;
 	}
 
-    void createVect(){
+	void createVect(){
 		std::vector<float> temp;
 		for (int i = 0; i < this->n; i++) {
 			for (int j = 0; j < this->m; j++)
@@ -26,6 +26,6 @@ public:
 			temp.clear();
 		}
 	}
-};
+};   */
 //---------------------------------------------------------------------------
 #endif

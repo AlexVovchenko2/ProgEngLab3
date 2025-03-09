@@ -22,20 +22,27 @@ object MainForm: TMainForm
     end
     object Solution1: TMenuItem
       Caption = 'Solution'
+      GroupIndex = 10
       object Mode1: TMenuItem
         Caption = 'Mode'
         OnClick = Mode1Click
       end
-      object Compute1: TMenuItem
-        Caption = 'Compute'
-        OnClick = Compute1Click
+      object Input1: TMenuItem
+        Caption = 'Input'
+        OnClick = Input1Click
+      end
+      object Solve1: TMenuItem
+        Caption = 'Solve'
+        OnClick = Solve1Click
       end
     end
     object Windows1: TMenuItem
       Caption = 'Windows'
+      GroupIndex = 20
     end
     object Help1: TMenuItem
       Caption = 'Help'
+      GroupIndex = 30
       object About1: TMenuItem
         Caption = 'About'
         OnClick = About1Click
