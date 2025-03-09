@@ -1,0 +1,50 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Main.h"
+#include "About.h"
+//---------------------------------------------------------------------------
+#pragma resource "*.dfm"
+TMainForm *MainForm;
+//---------------------------------------------------------------------------
+
+__fastcall TMainForm::TMainForm(TComponent *Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainForm::CreateMDIChild(String Name)
+{
+	TMDIChild *Child;
+
+	//--- create a new MDI child window ----
+	Child = new TMDIChild(Application);
+	Child->Caption = Name;
+	if (FileExists (Name))
+		Child->Memo1->Lines->LoadFromFile(Name);
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TMainForm::About1Click(TObject *Sender)
+{
+	AboutBox = new TAboutBox(this);
+	//AboutBox->ShowModal();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainForm::Mode1Click(TObject *Sender)
+{
+	 OKRightDlg->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainForm::Compute1Click(TObject *Sender)
+{
+	  DataInput->Show();
+}
+//---------------------------------------------------------------------------
+

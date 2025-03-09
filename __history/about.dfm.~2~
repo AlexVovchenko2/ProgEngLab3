@@ -1,0 +1,112 @@
+object AboutBox: TAboutBox
+  Left = 445
+  Top = 127
+  Margins.Left = 2
+  Margins.Top = 2
+  Margins.Right = 2
+  Margins.Bottom = 2
+  ActiveControl = OKButton
+  BorderStyle = bsDialog
+  Caption = 'About'
+  ClientHeight = 214
+  ClientWidth = 297
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  Position = poScreenCenter
+  Visible = True
+  OnClose = FormClose
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 8
+    Top = 8
+    Width = 277
+    Height = 158
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
+    BevelOuter = bvLowered
+    TabOrder = 0
+    object ProgramIcon: TImage
+      Left = 8
+      Top = 8
+      Width = 64
+      Height = 56
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
+      IsControl = True
+    end
+    object ProductName: TLabel
+      Left = 86
+      Top = 16
+      Width = 68
+      Height = 13
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
+      Caption = 'Product Name'
+      IsControl = True
+    end
+    object Version: TLabel
+      Left = 86
+      Top = 39
+      Width = 35
+      Height = 13
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
+      Caption = 'Version'
+      IsControl = True
+    end
+    object Copyright: TLabel
+      Left = 8
+      Top = 78
+      Width = 44
+      Height = 13
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
+      Caption = 'Copyright'
+      IsControl = True
+    end
+    object Comments: TLabel
+      Left = 8
+      Top = 102
+      Width = 49
+      Height = 13
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
+      Caption = 'Comments'
+      WordWrap = True
+      IsControl = True
+    end
+  end
+  object OKButton: TButton
+    Left = 118
+    Top = 175
+    Width = 64
+    Height = 33
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
+    Caption = 'OK'
+    Default = True
+    ModalResult = 1
+    TabOrder = 1
+    OnClick = OKButtonClick
+    IsControl = True
+  end
+end

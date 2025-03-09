@@ -1,0 +1,16 @@
+object MainForm: TMainForm
+  Left = 194
+  Top = 111
+  Caption = 'MDI Application'
+  ClientHeight = 275
+  ClientWidth = 368
+  Color = clAppWorkSpace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Default'
+  Font.Style = []
+  FormStyle = fsMDIForm
+  Position = poDefault
+  TextHeight = 13
+end
