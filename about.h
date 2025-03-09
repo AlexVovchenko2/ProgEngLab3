@@ -11,6 +11,7 @@
 #include <Vcl.Buttons.hpp>
 #include <Vcl.Forms.hpp>
 #include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Imaging.jpeg.hpp>
 //----------------------------------------------------------------------------
 class TAboutBox : public TForm
 {

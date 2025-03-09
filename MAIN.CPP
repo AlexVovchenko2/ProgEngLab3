@@ -56,3 +56,51 @@ void __fastcall TMainForm::Solve1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TMainForm::Exit1Click(TObject *Sender)
+{
+    Close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainForm::Cascade1Click(TObject *Sender)
+{
+    Cascade();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ile1Click(TObject *Sender)
+{
+    Tile();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainForm::CloseCurrent1Click(TObject *Sender)
+{
+    if (ActiveMDIChild != NULL) { ActiveMDIChild->Close(); }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainForm::CloseAll1Click(TObject *Sender)
+{
+    for (int i = MDIChildCount-1; i >= 0; i--) { MDIChildren[i]->Close(); }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainForm::MinimizeAll1Click(TObject *Sender)
+{
+    for (int i = MDIChildCount-1; i>= 0;i--) { MDIChildren[i]->WindowState=wsMinimized; }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainForm::Next1Click(TObject *Sender)
+{
+    Next();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainForm::Previous1Click(TObject *Sender)
+{
+    Previous();
+}
+//---------------------------------------------------------------------------
+

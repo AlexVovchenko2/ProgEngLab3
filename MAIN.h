@@ -48,10 +48,26 @@ __published:
 	TMenuItem *Mode1;
 	TMenuItem *Input1;
 	TMenuItem *Solve1;
+	TMenuItem *Exit1;
+	TMenuItem *Cascade1;
+	TMenuItem *ile1;
+	TMenuItem *CloseCurrent1;
+	TMenuItem *CloseAll1;
+	TMenuItem *MinimizeAll1;
+	TMenuItem *Next1;
+	TMenuItem *Previous1;
 	void __fastcall About1Click(TObject *Sender);
 	void __fastcall Mode1Click(TObject *Sender);
 	void __fastcall Input1Click(TObject *Sender);
 	void __fastcall Solve1Click(TObject *Sender);
+	void __fastcall Exit1Click(TObject *Sender);
+	void __fastcall Cascade1Click(TObject *Sender);
+	void __fastcall ile1Click(TObject *Sender);
+	void __fastcall CloseCurrent1Click(TObject *Sender);
+	void __fastcall CloseAll1Click(TObject *Sender);
+	void __fastcall MinimizeAll1Click(TObject *Sender);
+	void __fastcall Next1Click(TObject *Sender);
+	void __fastcall Previous1Click(TObject *Sender);
 	
 private:
 	void __fastcall CreateMDIChild(const String Name);
